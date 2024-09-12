@@ -1287,9 +1287,11 @@ input, select, textarea {
 		}
 				
 		/* Media Query to Hide the Bottom Line on Screens Below 737px */
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 480px) {
 			#header .content:before {
-				display: none; /* Hides the line when width is below 737px */
+				/* display: none;  */
+				height: calc(2rem + 1px);
+				bottom:-2.1rem;
 			}
 		}			
 
@@ -1447,7 +1449,7 @@ input, select, textarea {
 			}
 
 				#header > *:before {
-					top: calc(-2rem - 1px);
+					/* top: calc(-2rem - 1px); */
 					height: calc(2rem + 1px);
 				}
 
