@@ -1140,9 +1140,12 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto,
+ 256px 256px;
+			background-position: center,
+ center;
+			background-repeat: no-repeat,
+ repeat;
 			z-index: 2;
 		}
 
@@ -1268,16 +1271,27 @@ input, select, textarea {
 			margin-top: 3.5rem;
 		}
 
-			#header > *:before {
-				content: '';
-				display: block;
-				position: absolute;
-				top: calc(-3.5rem - 1px);
-				left: calc(50% - 1px);
-				width: 1px;
-				height: calc(3.5rem + 1px);
-				background: #ffffff;
+		#header > *:before {
+			display: none; /* Hides the top line */
+		}
+		
+		#header .content:before {
+			content: ''; /* Keeps the bottom vertical line */
+			display: block;
+			position: absolute;
+			bottom: -3.5rem; /* Adjusts the length downward */
+			left: calc(50% - 1px); /* Centers the line */
+			width: 1px;
+			height: 3.5rem; /* Adjust as needed */
+			background: #ffffff; /* White line */
+		}
+				
+		/* Media Query to Hide the Bottom Line on Screens Below 737px */
+		@media screen and (max-width: 736px) {
+			#header .content:before {
+				display: none; /* Hides the line when width is below 737px */
 			}
+		}			
 
 		#header > :first-child {
 			margin-top: 0;
@@ -1656,3 +1670,32 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+.custom-video {
+	margin-bottom: -55px; /* Adjust the value as needed */
+}
+
+.content-sizing {
+	width:40%;
+}
+
+@media screen and (max-width: 961px) {
+	.content-sizing {
+		width:70%;
+	}
+	.custom-video {
+		width:70%;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	.custom-video {
+		margin-bottom: -30px; /* Adjust the value as needed */
+		width:70%;
+	}
+}
+
+.icons-main-page {
+	margin-bottom:25px;
+	margin-top:-10px;
+}
