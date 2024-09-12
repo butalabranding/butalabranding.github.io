@@ -1690,7 +1690,7 @@ input, select, textarea {
 
 @media screen and (max-width: 736px) {
 	.custom-video {
-		/* margin-bottom: -30px;  */
+		margin-bottom: -15px; 
 		width:70%;
 	}
 }
