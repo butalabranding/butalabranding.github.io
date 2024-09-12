@@ -1672,7 +1672,7 @@ input, select, textarea {
 		}
 
 .custom-video {
-	margin-bottom: -55px; /* Adjust the value as needed */
+	margin-bottom: -25px;
 }
 
 .content-sizing {
@@ -1690,7 +1690,7 @@ input, select, textarea {
 
 @media screen and (max-width: 736px) {
 	.custom-video {
-		margin-bottom: -30px; /* Adjust the value as needed */
+		/* margin-bottom: -30px;  */
 		width:70%;
 	}
 }
