@@ -19,13 +19,32 @@
 
 				<!-- Header -->
 					<header id="header">
-						<!-- <div class="logo">
-							<span class="icon fa-gem"></span>
-						</div> -->
-						<video class="custom-video" width="40%" height="100%" autoplay muted loop playsinline preload="metadata" controlslist="nodownload">
-							<source src="videos/ChrisCarVideo.mp4" type="video/mp4">
-							Your browser does not support the video tag.
-						</video>						
+
+						<!-- Video Container -->
+						<div class="video-container">
+							<video style="min-height: 170px; min-width:270px;" id="videoPlayer" width="40%" height="100%" autoplay muted loop playsinline preload="metadata" controlslist="nodownload">
+								<source src="videos/ChrisCarVideo.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+							
+							<!-- Left Arrow -->
+							<div class="arrow left-arrow" onclick="prevVideo()">
+								&#10094;
+							</div>
+
+							<!-- Right Arrow -->
+							<div class="arrow right-arrow" onclick="nextVideo()">
+								&#10095;
+							</div>
+
+							<!-- Video Indicators (Dots) -->
+							<div class="dots-container">
+								<span class="dot" onclick="currentVideo(1)"></span>
+								<span class="dot" onclick="currentVideo(2)"></span>
+								<span class="dot" onclick="currentVideo(3)"></span>
+								<span class="dot" onclick="currentVideo(4)"></span>
+							</div>
+						</div>
 						
 						<div class="content content-sizing">
 							<div class="inner">

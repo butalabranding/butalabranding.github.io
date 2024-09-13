@@ -1327,7 +1327,7 @@ input, select, textarea {
 				-moz-transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
 				-webkit-transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
 				-ms-transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
-				transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
+				transition: max-height 8s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
 				-moz-transition-delay: 0.25s;
 				-webkit-transition-delay: 0.25s;
 				-ms-transition-delay: 0.25s;
@@ -1673,10 +1673,6 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-.custom-video {
-	margin-bottom: -25px;
-}
-
 .content-sizing {
 	width:40%;
 }
@@ -1685,19 +1681,86 @@ input, select, textarea {
 	.content-sizing {
 		width:70%;
 	}
-	.custom-video {
-		width:70%;
-	}
-}
-
-@media screen and (max-width: 736px) {
-	.custom-video {
-		margin-bottom: -15px; 
-		width:70%;
-	}
 }
 
 .icons-main-page {
 	margin-bottom:25px;
 	margin-top:-10px;
+}
+
+/* Video container for positioning */
+.video-container {
+    position: relative;
+    display: inline-block;
+
+	height: 300px;
+	width:100%;
+}
+
+/* Arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    padding-left: 16px;
+	padding-right: 16px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+    transition: background-color 0.3s;
+}
+
+.left-arrow {
+    left: 28.1%;
+}
+
+.right-arrow {
+    right: 28.1%;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Media query for screens 800px and below */
+@media screen and (max-width: 800px) {
+    /* When the screen is 800px or below, position the arrows a fixed distance from the center */
+
+    .left-arrow {
+        left: calc(50% - 153px); /* 150px from the center */
+    }
+
+    .right-arrow {
+        left: calc(50% + 110px); /* 150px from the center, but on the right */
+        right: auto; /* Override the right property */
+    }
+}
+
+/* Dots */
+.dots-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #fff;
 }
