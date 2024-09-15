@@ -1696,6 +1696,12 @@ input, select, textarea {
 	width:100%;
 }
 
+@media screen and (min-width: 823px) {
+	.video-container {
+		height:200px;
+	}
+}
+
 /* Arrows */
 .arrow {
     position: absolute;
