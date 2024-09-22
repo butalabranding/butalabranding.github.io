@@ -1698,7 +1698,7 @@ input, select, textarea {
 
 @media screen and (min-width: 823px) {
 	.video-container {
-		height:200px;
+		height:600px;
 	}
 }
 
@@ -1713,7 +1713,7 @@ input, select, textarea {
     cursor: pointer;
     color: white;
     font-size: 24px;
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
     border-radius: 50%;
     z-index: 1;
     transform: translateY(-50%);
@@ -1721,11 +1721,11 @@ input, select, textarea {
 }
 
 .left-arrow {
-    left: 28.1%;
+    left: 110px;
 }
 
 .right-arrow {
-    right: 28.1%;
+    right: 110px;
 }
 
 .arrow:hover {
@@ -1733,18 +1733,31 @@ input, select, textarea {
 }
 
 /* Media query for screens 800px and below */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1400px) {
     /* When the screen is 800px or below, position the arrows a fixed distance from the center */
 
     .left-arrow {
-        left: calc(50% - 153px); /* 150px from the center */
+		left:3px;
     }
 
     .right-arrow {
-        left: calc(50% + 110px); /* 150px from the center, but on the right */
-        right: auto; /* Override the right property */
+		right:3px;
     }
 }
+
+/* Media query for screens 800px and below */
+/* @media screen and (max-width: 800px) { */
+    /* When the screen is 800px or below, position the arrows a fixed distance from the center */
+
+    /* .left-arrow { */
+        /* left: calc(50% - 153px); 150px from the center */
+    /* } */
+
+    /* .right-arrow { */
+        /* left: calc(50% + 110px); 150px from the center, but on the right */
+        /* right: auto; Override the right property */
+    /* }
+} */
 
 /* Dots */
 .dots-container {
