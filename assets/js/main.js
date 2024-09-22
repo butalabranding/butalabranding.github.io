@@ -403,7 +403,7 @@
 // Array of video sources
 const videoSources = [
     'videos/ChrisCarVideo.mp4',
-    'videos/ChrisCarVideo.mp4',
+    'videos/Mikes_weird_video.mp4',
     'videos/ChrisCarVideo.mp4',
     'videos/ChrisCarVideo.mp4'
 ];
