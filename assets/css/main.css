@@ -1829,3 +1829,11 @@ input, select, textarea {
 .use-middle {
 	margin-top: 3.5rem;
 }
+
+
+.ugc-buttons {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	gap:15px;
+}
