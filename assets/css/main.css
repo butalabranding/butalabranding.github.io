@@ -1727,8 +1727,25 @@ input, select, textarea {
 }
 
 .thin-banner-overlay .brand-name {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 600;
+}
+
+/* Branding Logo and Text Container */
+.branding-logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Adjustments for the Logo */
+.branding-logo svg {
+    margin-right: 10px; /* Adds spacing between the logo and the text */
+}
+
+/* Styling for the Brand Name */
+.brand-name {
+    font-size: 1.7rem;
+    font-weight: bold;
 }
 
 .thin-banner-overlay .button:hover {
