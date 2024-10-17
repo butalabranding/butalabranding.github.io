@@ -1732,6 +1732,22 @@ input, select, textarea {
     font-weight: 500;
 }
 
+@media screen and (max-width: 525px) {
+	.thin-banner-overlay .brand-name {
+		font-size: 1.7rem;
+		font-weight: 500;
+	}
+
+	.thin-banner-content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.thin-banner-overlay .button {
+		margin-top:10px;
+	}
+}
+
 /* Branding Logo and Text Container */
 .branding-logo {
     display: flex;
@@ -1765,17 +1781,17 @@ input, select, textarea {
 /* Text Overlay on Video at Bottom Left */
 .video-text-overlay {
     position: absolute;
-    bottom: 130px; /* Position near bottom-left corner */
+    bottom: 130px;
     left: 35px;
     color: #ffffff;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-    z-index: 2; /* Ensure text is on top of the video */
-    max-width: 60%; /* Adjust to prevent text from occupying too much space */
+    z-index: 2;
+    max-width: 60%;
 	text-align: left;
 }
 
 .video-text-overlay h2 {
-    font-size: 2.5rem; /* Adjust the size as needed */
+    font-size: 2.5rem; 
     font-weight: bold;
     margin: 0;
 }
@@ -1783,6 +1799,31 @@ input, select, textarea {
 .video-text-overlay p {
     font-size: 1.25rem;
     margin: 0.5rem 0 0;
+}
+
+@media screen and (max-width: 525px) {
+	.video-text-overlay {
+		position:unset;
+		margin-left:55px;
+	}
+
+	.video-text-overlay h2 {
+		font-size: 1.25rem;
+	}
+	
+	.video-text-overlay p {
+		font-size: 0.75rem;
+	}
+}
+
+@media screen and (max-width: 959px) {
+	.video-text-overlay h2 {
+		font-size: 1.25rem;
+	}
+	
+	.video-text-overlay p {
+		font-size: 0.75rem;
+	}
 }
 
 .use-middle {
