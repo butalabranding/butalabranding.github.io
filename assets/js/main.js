@@ -399,3 +399,53 @@
 					});
 
 })(jQuery);
+
+
+let currentVideo = 0;
+const videos = document.querySelectorAll('.conzuri-video-container');
+
+function playVideo(index) {
+    videos.forEach((videoContainer, i) => {
+        const video = videoContainer.querySelector('video');
+        if (i === index) {
+            videoContainer.style.display = 'flex';
+            video.muted = false;
+            video.play();
+        } else {
+            videoContainer.style.display = 'none';
+            video.muted = true;
+            video.pause();
+        }
+    });
+}
+
+function nextVideo() {
+    currentVideo = (currentVideo + 1) % videos.length; // Loop to first video if on the last one
+    playVideo(currentVideo);
+}
+
+function prevVideo() {
+    currentVideo = (currentVideo - 1 + videos.length) % videos.length; // Loop to last video if on the first one
+    playVideo(currentVideo);
+}
+
+// Automatically play the first video on page load
+playVideo(currentVideo);
+
+// Add a scroll listener to stop or mute videos based on visibility (optional for better control)
+window.addEventListener('scroll', () => {
+    videos.forEach(video => {
+        if (isElementInViewport(video)) {
+            video.muted = false;
+            video.play();
+        } else {
+            video.muted = true;
+            video.pause();
+        }
+    });
+});
+
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.top >= 0 && rect.bottom <= window.innerHeight;
+}
