@@ -1902,3 +1902,14 @@ body, html {
     gap: 10px;
 	margin-right: 40px;
 }
+
+
+.home-link {
+    text-decoration: none; /* Remove the underline */
+    color: inherit; /* Keep the color of the brand name */
+}
+
+.home-link:hover .brand-name {
+    text-decoration: underline; 
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
