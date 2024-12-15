@@ -1911,20 +1911,16 @@ body, html {
 
 .conzuri-video-container {
     display: none;
-    width: 100%;
+    width: auto;
     height: 80vh; /* Each video takes full screen height */
     justify-content: center;
     align-items: center;
 }
 
 .video-navigation {
-    position: fixed;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-	margin-right: 40px;
+	display: flex;
+	justify-content: center;
+	gap:15px;
 }
 
 
@@ -1936,4 +1932,20 @@ body, html {
 .home-link:hover .brand-name {
     text-decoration: underline; 
     cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.h-stack {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap:5svw;
+	justify-content: center;
+}
+
+.video-section {
+	width: 40%;
+}
+
+.videoPlayer {
+    border-radius: 20px;
 }
