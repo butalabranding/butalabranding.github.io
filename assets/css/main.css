@@ -1883,12 +1883,17 @@ input, select, textarea {
 	height: 80px;
 	object-fit: cover; /* Ensures the image fits nicely in the 100x100 space */
 	padding-top: 15px;
+	border-radius: 5px;
 }
 
 .ugc-buttons .button:hover .ugc-btn-img img {
 	opacity: 0.8; /* Optional effect to dim the image on hover */
 }
 
+.static-conzuri img {
+	padding-top: 0px;
+	margin-bottom:15px;
+}
 
 .nav-buttons {
 	display: flex;
@@ -1952,6 +1957,6 @@ body, html {
     border-radius: 20px;
 }
 
-#video2, #video3 {
+#video2bc, #video3bc {
 	width: 80%;
 }
